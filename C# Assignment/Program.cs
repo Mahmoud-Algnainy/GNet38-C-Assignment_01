@@ -51,10 +51,33 @@ namespace C__Assignment
             // Q03. Look at the line below. Is it a compile-time error, a runtime error, or a logical error? Fix it.
 
             //int pages = "464"; its a compile-time error
-            int page = int.Parse("464");
-            Console.WriteLine(page);
+            //int page = int.Parse("464");
+            //Console.WriteLine(page);
             #endregion
 
+            #region Question 4
+            // Q04. Write code that divides 10 by 0 inside a try block, catches the exception, prints "Cannot divide by zero", and then prints "Done" in a finally block.
+            int x = 10;
+            int y = 0;
+           //int result =x/y;
+            int result;
+            //Console.WriteLine(result);
+            try
+            {
+                result = x / y;
+                
+
+            }
+            catch (DivideByZeroException )
+            {
+                Console.WriteLine("Cannot divide by zero");
+                
+            }
+            finally
+            {
+                Console.WriteLine("Done");
+            }
+            #endregion
         }
     }
 }
