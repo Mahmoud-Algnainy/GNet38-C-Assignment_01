@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Dynamic;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 
 namespace C__Assignment
@@ -98,9 +99,32 @@ namespace C__Assignment
 
             #region Question 7
             // Given string pagesText = "464";, convert it into an int using the Convert class.
-            string pagesText = "464";
-            int pagesInt = Convert.ToInt32(pagesText);
-            Console.WriteLine(pagesInt);
+            //string pagesText = "464";
+            //int pagesInt = Convert.ToInt32(pagesText);
+            //Console.WriteLine(pagesInt);
+            #endregion
+
+            #region Question 8
+            // Given string yearText = "2023";, convert it using int.Parse(). Then given string badText = "abc";,use int.TryParse() to safely try converting it, and print "Invalid number" if it fails.
+
+            string yearText = "2023";
+            int yearTextInt = int.Parse(yearText);
+            Console.WriteLine(yearTextInt);
+
+            string badText = "abc";
+            int badTextInt;
+            //one solution 
+            Console.WriteLine(int.TryParse(badText, out badTextInt)? badTextInt : "Invalid number");
+
+            //another solution 
+            if (int.TryParse(badText, out badTextInt))
+            {
+                Console.WriteLine(badTextInt);
+            }
+            else
+            {
+                Console.WriteLine("Invalid number");
+            }
             #endregion
         }
     }
