@@ -10,7 +10,6 @@ namespace C__Assignment
         public string Title = title;
         public int Pages  = pages;
 
-        //public override string ToString() => $"Book Title: {title}, Pages: {pages}";
 
     }
     class Program
