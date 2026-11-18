@@ -37,15 +37,18 @@ namespace C__Assignment
             // Q02.Using the Book class above, print the result of calling ToString(), Equals() (compare book with itself), GetHashCode(), and GetType() on book.
 
             Book book1 = new Book("book1", 250);
-            Book book2 = new Book("book2", 300);
+
             Console.WriteLine(book1.ToString());
-            Console.WriteLine(book2.ToString());
-            Console.WriteLine(book1.Equals(book2));
+
+            Console.WriteLine(book1.Equals(book1));
             Console.WriteLine(book1.GetHashCode());
-            Console.WriteLine(book2.GetHashCode());
+
             Console.WriteLine(book1.GetType());
-            Console.WriteLine(book2.GetType());
+
             #endregion
+
+
+
         }
     }
 }
